@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprehensive Medical Office Procedures Quiz</title>
+    <title>Comprehensive Medical Office Procedures Quiz (100 Questions)</title>
     <style>
         :root {
             --bg-color: #fcf4f6;
@@ -196,7 +196,7 @@
 <div class="quiz-container" id="quizContainer">
     <header>
         <h1>Medical Office Procedures Quiz</h1>
-        <div class="subtitle">Complete Question Bank (Based on Module Presentation Files)</div>
+        <div class="subtitle">100-Question Comprehensive Bank (Based on Module Files)</div>
     </header>
 
     <div class="progress-bar-container">
@@ -224,178 +224,331 @@
 
 <script>
     const questions = [
+        // SECTION 1: Introduction to Medical Office Procedures & Personnel
         {
-            question: "Which of the following describes the main purpose of Medical Office Procedures?",
+            question: "What primary skills does Medical Office Procedures provide to students?",
             options: [
-                "Providing front office (administrative) skills to work in a healthcare facility",
-                "Performing high-risk surgical operations in place of physicians",
-                "Manufacturing pharmaceutical supplies and retail marketing",
-                "Managing public transport networks for patients"
-            ],
-            answer: 0
-        },
-        {
-            question: "Which healthcare professional is primarily responsible for diagnosing and treating illnesses and prescribing medications?",
-            options: [
-                "Pharmacist",
-                "Doctor/Physician",
-                "Radiology Technologist",
-                "Medical Assistant"
+                "Surgical and operative techniques",
+                "Front office (administrative) skills",
+                "Pharmacological manufacturing methods",
+                "Advanced radiological diagnostics"
             ],
             answer: 1
         },
         {
-            question: "What type of healthcare provider provides primary care for a wide range of general conditions?",
+            question: "What is the overall purpose of administrative and clinical tasks performed in a medical office?",
+            options: [
+                "To lower healthcare worker wages",
+                "To replace licensed medical doctors",
+                "To ensure smooth and efficient operations",
+                "To sell medical equipment to patients"
+            ],
+            answer: 2
+        },
+        {
+            question: "Which of the following is NOT listed as a topic covered in Medical Office Procedures?",
+            options: [
+                "Professionalism and ethics",
+                "Scheduling and reception skills",
+                "Dental surgery and tooth extraction",
+                "Medical records and filing"
+            ],
+            answer: 2
+        },
+        {
+            question: "Medical Office Procedures ensure compliance with which of the following?",
+            options: [
+                "Healthcare regulations",
+                "Real estate guidelines",
+                "Corporate tax loopholes",
+                "International shipping laws"
+            ],
+            answer: 0
+        },
+        {
+            question: "What is the primary role of Doctors/Physicians?",
+            options: [
+                "Clean operating rooms",
+                "Diagnose and treat illnesses, prescribe medications, and provide specialized care",
+                "Manage hospital parking spaces",
+                "Transcribe legal insurance disputes"
+            ],
+            answer: 1
+        },
+        {
+            question: "Which type of physician provides primary care for a wide range of conditions?",
             options: [
                 "Specialists",
                 "General Practitioners (GPs)",
+                "Radiologists",
+                "Surgeons"
+            ],
+            answer: 1
+        },
+        {
+            question: "Which medical specialists focus on specific health areas such as cardiology, dermatology, or pediatrics?",
+            options: [
+                "General Practitioners",
+                "Specialists",
+                "Nursing Aides",
+                "Health Support Workers"
+            ],
+            answer: 1
+        },
+        {
+            question: "What is a core responsibility of Nurses in a healthcare facility?",
+            options: [
+                "Operating high-end billing software only",
+                "Providing direct patient care, assisting doctors, and administering medications",
+                "Performing complex surgical procedures independently",
+                "Manufacturing hospital beds"
+            ],
+            answer: 1
+        },
+        {
+            question: "Which nursing professional delivers advanced nursing care?",
+            options: [
+                "Registered Nurses (RNs)",
+                "Nursing Assistants",
+                "Nursing Aides",
+                "Home Health Aides"
+            ],
+            answer: 0
+        },
+        {
+            question: "Under whose direct supervision do Nursing Assistants provide basic medical care?",
+            options: [
+                "Hospital security officers",
+                "RNs and doctors",
+                "Public health officers",
+                "Administrative clerks"
+            ],
+            answer: 1
+        },
+        {
+            question: "What is the specific duty of a Nursing Aide?",
+            options: [
+                "Prescribing emergency medications",
+                "Helping RNs in administering supplies needed",
+                "Performing laboratory biopsies",
+                "Interpreting CT scans"
+            ],
+            answer: 1
+        },
+        {
+            question: "Which duties fall under Medical Assistants?",
+            options: [
+                "Administering general anesthesia",
+                "Performing administrative tasks and assisting in clinical procedures",
+                "Conducting formal psychological therapy",
+                "Writing hospital policies"
+            ],
+            answer: 1
+        },
+        {
+            question: "What are two recognized types of Medical Assistants?",
+            options: [
+                "Primary and Secondary",
+                "Clinical and Administrative",
+                "Legal and Technical",
+                "Surgical and Emergency"
+            ],
+            answer: 1
+        },
+        {
+            question: "What is a primary clinical procedure that a Medical Assistant may perform?",
+            options: [
+                "Drawing blood or preparing patients for exams",
+                "Performing open-heart surgery",
+                "Prescribing controlled substances",
+                "Reading ultrasound images"
+            ],
+            answer: 0
+        },
+        {
+            question: "What is the role of a Pharmacist?",
+            options: [
+                "Dispense medications, provide medication counseling, and ensure safe prescription use",
+                "Take X-ray images of bone fractures",
+                "Guide patients through physical rehabilitation exercises",
+                "Manage public health policies"
+            ],
+            answer: 0
+        },
+        {
+            question: "Which healthcare professional performs diagnostic tests such as blood tests and biopsies?",
+            options: [
                 "Occupational Therapists",
+                "Lab Technicians/Technologists",
+                "Physical Therapists",
                 "Psychiatrists"
             ],
             answer: 1
         },
         {
-            question: "Which nurse classification delivers advanced nursing care?",
+            question: "What specialized equipment is operated by Radiology Technologists?",
             options: [
-                "Registered Nurses (RNs)",
-                "Nursing Assistants",
-                "Nursing Aides",
-                "Public Health Workers"
-            ],
-            answer: 0
-        },
-        {
-            question: "Which role provides basic medical care strictly under the supervision of RNs and doctors?",
-            options: [
-                "Physician Assistant",
-                "Specialist Doctor",
-                "Nursing Assistant",
-                "Lab Technologist"
-            ],
-            answer: 2
-        },
-        {
-            question: "What is the main function of a Nursing Aide?",
-            options: [
-                "Prescribing targeted therapy medications",
-                "Helps the RNs in administering supplies needed",
-                "Operating magnetic resonance imaging (MRI) equipment",
-                "Handling primary legal disputes for hospitals"
+                "Dialysis machines",
+                "X-rays, MRIs, and CT scans",
+                "Electrocardiogram patches only",
+                "Anesthesia pumps"
             ],
             answer: 1
         },
         {
-            question: "Which professional performs diagnostic tests such as blood tests, biopsies, and imaging interpretation support?",
+            question: "Physical Therapists help patients recover from injuries or surgeries by guiding them through what?",
             options: [
-                "Lab Technicians/Technologists",
-                "Occupational Therapists",
-                "Medical Secretaries",
-                "Paramedics"
+                "Exercises and rehabilitation techniques",
+                "Mental health counseling sessions",
+                "Dietary supplement sales",
+                "Speech therapy exercises"
             ],
             answer: 0
         },
         {
-            question: "Which specialist operates imaging equipment such as X-rays, MRIs, and CT scans?",
+            question: "What is the primary objective of an Occupational Therapist?",
             options: [
-                "Physical Therapist",
-                "Radiology Technologist",
-                "Clinical Psychologist",
-                "Public Health Officer"
-            ],
-            answer: 1
-        },
-        {
-            question: "What is the primary objective of a Physical Therapist?",
-            options: [
-                "To dispense prescription drugs",
-                "To help patients recover from injuries or surgeries through exercises and rehabilitation",
-                "To perform emergency surgical interventions",
-                "To prepare insurance claims and billing statements"
-            ],
-            answer: 1
-        },
-        {
-            question: "Which therapist assists patients in regaining or improving skills needed for daily living and work after an injury or illness?",
-            options: [
-                "Occupational Therapist",
-                "Radiology Technologist",
-                "Emergency Medical Technician",
-                "General Practitioner"
+                "Assisting patients in regaining or improving skills needed for daily living and work",
+                "Performing blood draws and urine tests",
+                "Operating diagnostic X-ray machinery",
+                "Prescribing psychotropic drugs"
             ],
             answer: 0
         },
         {
-            question: "Which emergency response personnel provide immediate care in ambulances or at accident scenes?",
+            question: "Which medical professionals provide immediate care in emergency situations, often in ambulances or at accident scenes?",
             options: [
-                "Pharmacists and Lab Technicians",
+                "General Practitioners and Specialists",
                 "Paramedics and Emergency Medical Technicians (EMTs)",
-                "Psychiatrists and Psychologists",
-                "Administrative Personnel"
+                "Radiologists and Lab Technicians",
+                "Physical and Occupational Therapists"
             ],
             answer: 1
         },
         {
-            question: "What differentiates a Psychiatrist from a Psychologist?",
+            question: "What is the primary role of Administrative Personnel in a healthcare facility?",
             options: [
-                "Psychiatrists are medical doctors who can prescribe medications for mental illnesses.",
-                "Psychologists perform diagnostic X-rays while psychiatrists do not.",
-                "Psychiatrists only conduct physical therapy exercises.",
-                "Psychologists are permitted to perform surgical procedures."
+                "Administering vaccines to infants",
+                "Handling office management, patient billing, insurance claims, and scheduling",
+                "Conducting psychiatric consultations",
+                "Performing surgical operations"
+            ],
+            answer: 1
+        },
+        {
+            question: "What areas do Public Health Professionals focus on?",
+            options: [
+                "Community health, disease prevention, health education, and public health policy",
+                "Individual surgical recovery",
+                "Filing insurance disputes in court",
+                "Selling retail pharmaceuticals"
             ],
             answer: 0
         },
         {
-            question: "What are Medical Records?",
+            question: "Which of the following is classified as a Healthcare Support Worker?",
             options: [
-                "Financial ledger sheets used exclusively by accounting departments",
+                "Home health aides and nursing assistants helping with basic needs like bathing or feeding",
+                "Clinical psychologists",
+                "Chief medical officers",
+                "Radiology technologists"
+            ],
+            answer: 0
+        },
+        {
+            question: "How do Psychologists and Psychiatrists differ in their care delivery?",
+            options: [
+                "Psychologists are medical doctors; Psychiatrists are not.",
+                "Psychiatrists are medical doctors who can prescribe medications; Psychologists provide counseling and therapy.",
+                "Psychologists conduct surgery; Psychiatrists do not.",
+                "There is no difference between them."
+            ],
+            answer: 1
+        },
+        {
+            question: "Greeting patients and collecting personal and insurance information are parts of what procedure?",
+            options: [
+                "Patient Reception and Registration",
+                "Medical Coding",
+                "Discharge Planning",
+                "Operative Care"
+            ],
+            answer: 0
+        },
+
+        // SECTION 2: Medical Records & Privacy
+        {
+            question: "What are Medical Records defined as?",
+            options: [
+                "Monthly financial statements of a hospital",
                 "Documentation of a patient's medical history and care",
-                "Publicly published summaries of hospital equipment expenses",
-                "Internal communications sent between insurance brokers"
+                "Public promotional materials for clinics",
+                "Legal employment contracts of doctors"
             ],
             answer: 1
         },
         {
-            question: "Which of the following is an example of an Electronic Health Record (EHR)?",
+            question: "Which of the following is included inside a patient’s medical record?",
             options: [
-                "A handwritten paper chart kept in a filing cabinet",
-                "A digital version of a patient's chart accessible across different health providers",
-                "A printout stored in a personal home vault",
-                "A verbal report given over the telephone"
+                "Personal details, diagnoses, treatments, and laboratory results",
+                "Hospital payroll records",
+                "Personal bank details of the physician",
+                "Clinic lease terms"
+            ],
+            answer: 0
+        },
+        {
+            question: "What is an Electronic Health Record (EHR)?",
+            options: [
+                "A printed transcript sent by mail",
+                "A digital version of a patient's chart including information across different health providers",
+                "A local hard drive backup of administrative staff schedules",
+                "A website where patients post public medical reviews"
             ],
             answer: 1
         },
         {
-            question: "What are Patient Portals?",
+            question: "What are traditional handwritten or printed medical records called?",
             options: [
-                "Online platforms allowing patients to view and manage their own medical records",
-                "Physical doorways designated for emergency personnel only",
-                "Internal server rooms holding paper backup files",
-                "Billing counters located at hospital entrances"
+                "Digital Health Records",
+                "Paper Records",
+                "Patient Portals",
+                "Progress Notes"
+            ],
+            answer: 1
+        },
+        {
+            question: "What is the function of Patient Portals?",
+            options: [
+                "Online platforms allowing patients to view and manage their own records",
+                "Secure channels used only by insurance companies",
+                "Software for scheduling physician vacations",
+                "Digital doors used in surgical rooms"
             ],
             answer: 0
         },
         {
             question: "How do medical records support Continuity of Care?",
             options: [
-                "By allowing doctors to check previous treatment before initiating new treatment",
-                "By automatically generating marketing brochures for new medications",
-                "By deleting historical records to keep files lightweight",
-                "By ensuring patients receive discounts on healthcare costs"
+                "By allowing doctors to check previous treatment before giving new treatment",
+                "By automatically renewing patient insurance plans",
+                "By eliminating the need for follow-up appointments",
+                "By reducing patient hospital bills"
             ],
             answer: 0
         },
         {
-            question: "Under what circumstance are medical records used as Legal Documentation?",
+            question: "How are medical records used as Legal Documentation?",
             options: [
+                "As proof of building ownership",
                 "As legal evidence in case of disputes regarding medical care",
-                "To standardise employee salaries across healthcare units",
-                "To serve as public advertisements for hospital quality",
-                "To file commercial tax exemptions"
+                "To register medical staff with local tax authorities",
+                "To verify a patient's voting eligibility"
             ],
-            answer: 0
+            answer: 1
         },
         {
-            question: "Which major United States legislation is cited for protecting patient record confidentiality?",
+            question: "Which United States federal law protects patient record confidentiality as cited in the text?",
             options: [
                 "OSHA",
                 "HIPAA",
@@ -405,122 +558,680 @@
             answer: 1
         },
         {
-            question: "What is a Medical Report?",
+            question: "What does confidentiality of medical records mean in practice?",
             options: [
-                "A written document communicating medical history, diagnoses, treatments, and progress",
-                "An invoice detailing hardware purchase costs for a clinic",
-                "A legal contract signed between drug distributors and pharmacies",
-                "A press release distributed to local news stations"
+                "Records can be shared freely with any family member",
+                "Patient information should not be shared with unauthorized people",
+                "Records must be destroyed immediately after treatment",
+                "Records are published on the clinic’s bulletin board"
+            ],
+            answer: 1
+        },
+        {
+            question: "Which of the following details is recorded in a medical record?",
+            options: [
+                "Medications",
+                "Employee benefits",
+                "Janitorial supplies",
+                "Medical school grades"
             ],
             answer: 0
         },
         {
-            question: "Which type of medical report specifically details a surgical procedure and its outcomes?",
+            question: "Why must medical records be updated regularly?",
+            options: [
+                "To keep them accurate and current for safe care",
+                "To increase paper usage in offices",
+                "To change the patient's ID number",
+                "To fill empty filing cabinets"
+            ],
+            answer: 0
+        },
+        {
+            question: "Who owns the confidentiality duty when handling patient files?",
+            options: [
+                "All healthcare personnel managing patient records",
+                "Only the head surgeon",
+                "Only the IT department",
+                "The patient's employer"
+            ],
+            answer: 0
+        },
+        {
+            question: "What is an example of continuity of care?",
+            options: [
+                "A physician reviewing a patient’s drug allergies before prescribing a new drug",
+                "A clinic sending promotional emails for cosmetic products",
+                "A billing clerk issuing a cash receipt",
+                "A lab technician ordering fresh paper supplies"
+            ],
+            answer: 0
+        },
+        {
+            question: "In legal disputes, medical records serve as what?",
+            options: [
+                "Legal evidence",
+                "Verbal hearsay",
+                "Informal guidelines",
+                "Non-binding suggestions"
+            ],
+            answer: 0
+        },
+        {
+            question: "What is essential when storing paper medical records?",
+            options: [
+                "Storing them in a secure, access-controlled location",
+                "Leaving them open on the reception desk",
+                "Placing them in public waiting areas",
+                "Keeping them near unlocked entrance doors"
+            ],
+            answer: 0
+        },
+
+        // SECTION 3: Medical & Hospital Reports
+        {
+            question: "What is a Medical Report?",
+            options: [
+                "A verbal conversation between two nurses",
+                "A written document communicating medical history, diagnoses, treatments, and progress",
+                "A financial audit of hospital equipment",
+                "An annual report submitted to stockholders"
+            ],
+            answer: 1
+        },
+        {
+            question: "For whom are medical reports typically prepared?",
+            options: [
+                "Other doctors, insurance companies, and legal purposes",
+                "Local newspapers and media outlets",
+                "Unrelated third-party advertisers",
+                "General office visitors"
+            ],
+            answer: 0
+        },
+        {
+            question: "Which type of medical report describes a patient's symptoms, diagnosis, treatment, and prognosis?",
             options: [
                 "Clinical Report",
                 "Operative Report",
                 "Discharge Summary",
                 "Progress Notes"
             ],
-            answer: 1
+            answer: 0
         },
         {
-            question: "What is contained within a Discharge Summary?",
+            question: "Which medical report specifically details a surgical procedure and its outcomes?",
             options: [
-                "Daily initial attendance logs of clinic staff",
+                "Operative Report",
+                "Clinical Report",
+                "Admission Record",
+                "Nursing Record"
+            ],
+            answer: 0
+        },
+        {
+            question: "What is the primary content of a Discharge Summary?",
+            options: [
+                "Pre-surgery lab results only",
                 "A summary of the patient's hospital stay and instructions for aftercare",
-                "Equipment maintenance schedules for operating rooms",
-                "Pre-registration insurance pre-authorization codes"
+                "Daily vital signs recorded every hour",
+                "Itemized prices of surgical tools used"
             ],
             answer: 1
         },
         {
             question: "What are Progress Notes?",
             options: [
+                "Initial intake forms filled out by receptionists",
                 "Regular updates written by healthcare professionals on a patient's condition and treatment",
-                "Annual budget projections for medical office supplies",
-                "Certificates of completion for healthcare training modules",
-                "Receipts issued to patients upon cash payment"
+                "Standard operating manuals for clinic machinery",
+                "Written permission slips for patient release"
             ],
-            answer: 0
+            answer: 1
         },
         {
-            question: "Which hospital record documents personal and medical information upon entry to the facility?",
+            question: "Which hospital record documents a patient's personal and medical information upon admission?",
             options: [
                 "Patient Admission Records",
-                "Radiology and Lab Records",
                 "Surgical Records",
-                "Discharge Summary"
+                "Discharge Summaries",
+                "Operative Reports"
             ],
             answer: 0
         },
         {
-            question: "What information is typically stored in Nursing Records?",
+            question: "What information is recorded in Nursing Records?",
             options: [
-                "Surgical room leasing rates",
                 "Nursing observations, treatments, and patient responses",
-                "Radiology equipment calibration history",
-                "Pharmacist license renewal dates"
-            ],
-            answer: 1
-        },
-        {
-            question: "Alphabetical filing organizes patient records according to what key criterion?",
-            options: [
-                "Patient ID number",
-                "Patient last name",
-                "Date of birth",
-                "Severity of medical condition"
-            ],
-            answer: 1
-        },
-        {
-            question: "In Numerical Filing, how are files arranged?",
-            options: [
-                "By patient identification numbers",
-                "By age of the patient",
-                "By zip code of residence",
-                "By alphabetical sequence of first names"
+                "Physician payroll distribution",
+                "Maintenance schedules of nursing stations",
+                "Hospital food inventory"
             ],
             answer: 0
         },
         {
-            question: "What is the primary advantage of using Color-Coding in filing systems?",
+            question: "Radiology and Lab Records contain details regarding what?",
             options: [
-                "It reduces printing ink costs",
-                "It helps easily differentiate types of documents or urgency using visual labels",
-                "It eliminates the need to keep digital backups",
-                "It replaces the requirement for written patient names"
+                "Diagnostic tests and imaging results",
+                "Operating room lease fees",
+                "Patient insurance billing complaints",
+                "Staff shift schedules"
+            ],
+            answer: 0
+        },
+        {
+            question: "What is contained within Surgical Records?",
+            options: [
+                "Records of surgeries performed, including techniques, complications, and recovery",
+                "Minutes of administrative staff meetings",
+                "Routine outpatient check-in times",
+                "Pharmacy medication wholesale prices"
+            ],
+            answer: 0
+        },
+        {
+            question: "Which document includes instructions for a patient's aftercare following hospitalization?",
+            options: [
+                "Discharge Summary",
+                "Operative Report",
+                "Patient Admission Record",
+                "Clinical Report"
+            ],
+            answer: 0
+        },
+        {
+            question: "Who writes Progress Notes in a patient's medical file?",
+            options: [
+                "Healthcare professionals treating the patient",
+                "Medical office janitorial staff",
+                "External insurance adjusters",
+                "The patient's family members"
+            ],
+            answer: 0
+        },
+        {
+            question: "Which document is vital for communicating a patient's care plan to another physician?",
+            options: [
+                "Medical Report",
+                "Office Supply Invoice",
+                "Reception Desk Register",
+                "Employee Attendance Sheet"
+            ],
+            answer: 0
+        },
+        {
+            question: "A report detailing surgical techniques used and complications encountered during an operation is called a/an:",
+            options: [
+                "Operative Report / Surgical Record",
+                "Patient Admission Record",
+                "Nursing Record",
+                "Public Health Report"
+            ],
+            answer: 0
+        },
+        {
+            question: "What aspect of managing hospital records ensures authorized personnel can access records when needed?",
+            options: [
+                "Accessibility",
+                "Confidentiality",
+                "Color-coding",
+                "Proofreading"
+            ],
+            answer: 0
+        },
+
+        // SECTION 4: Filing Systems & Best Practices
+        {
+            question: "In Alphabetical Filing, how are patient records organized?",
+            options: [
+                "By the patient's last name",
+                "By the patient's first name",
+                "By the date of their first visit",
+                "By their social security number"
+            ],
+            answer: 0
+        },
+        {
+            question: "What is the correct sequence in Alphabetical Filing for: Smith, Santos, Taylor?",
+            options: [
+                "Smith → Santos → Taylor",
+                "Santos → Smith → Taylor",
+                "Taylor → Smith → Santos",
+                "Santos → Taylor → Smith"
             ],
             answer: 1
         },
         {
-            question: "According to best practices for document formatting, what line spacing is recommended?",
+            question: "How are records organized in Numerical Filing?",
             options: [
-                "Single line spacing (1.0) only",
+                "By patient ID numbers",
+                "By patient age",
+                "By room number",
+                "By date of birth"
+            ],
+            answer: 0
+        },
+        {
+            question: "Which sequence illustrates proper Numerical Filing?",
+            options: [
+                "Patient 003 → Patient 001 → Patient 002",
+                "Patient 001 → Patient 002 → Patient 003",
+                "Patient 100 → Patient 010 → Patient 001",
+                "Patient 002 → Patient 003 → Patient 001"
+            ],
+            answer: 1
+        },
+        {
+            question: "What is Color-Coding in a filing system?",
+            options: [
+                "Painting filing cabinets different decorative colors",
+                "Using color-coded labels to differentiate types of documents or urgency",
+                "Highlighting mistakes in red ink",
+                "Printing all records on colored paper"
+            ],
+            answer: 1
+        },
+        {
+            question: "What is the main practical advantage of Color-Coding patient files?",
+            options: [
+                "It makes files easily identifiable at a visual glance",
+                "It saves ink during document printing",
+                "It makes paper waterproof",
+                "It prevents files from getting dusty"
+            ],
+            answer: 0
+        },
+        {
+            question: "What does the filing best practice of 'Labeling' require?",
+            options: [
+                "Writing full patient biographies on file covers",
+                "Ensuring all records are clearly labeled and organized for quick access",
+                "Stamping every page with a red urgent mark",
+                "Placing barcode stickers on office walls"
+            ],
+            answer: 1
+        },
+        {
+            question: "Why is 'Regular Updates' listed as a filing best practice?",
+            options: [
+                "To continuously update files to ensure they are accurate and current",
+                "To clear out files every week",
+                "To change the filing system monthly",
+                "To keep administrative staff busy"
+            ],
+            answer: 0
+        },
+        {
+            question: "What is required under the filing best practice of 'Security'?",
+            options: [
+                "Storing records in a secure, access-controlled location to protect patient privacy",
+                "Hiring armed guards outside every file room",
+                "Encrypting paper files with physical padlocks on each folder",
+                "Keeping files locked away so even doctors cannot read them"
+            ],
+            answer: 0
+        },
+        {
+            question: "What three key management principles must be balanced when handling hospital records?",
+            options: [
+                "Speed, Cost, and Size",
+                "Confidentiality, Accuracy, and Accessibility",
+                "Color, Font, and Spacing",
+                "Design, Style, and Decoration"
+            ],
+            answer: 1
+        },
+        {
+            question: "Which filing system is best suited for maintaining patient anonymity in public areas?",
+            options: [
+                "Alphabetical Filing",
+                "Numerical Filing",
+                "Open-shelf Last-Name Filing",
+                "Chronological Name Order"
+            ],
+            answer: 1
+        },
+        {
+            question: "If a file for 'Taylor' is placed before 'Smith' in an alphabetical system, this is an example of:",
+            options: [
+                "Proper filing",
+                "Misfiling",
+                "Color-coding",
+                "Numerical indexing"
+            ],
+            answer: 1
+        },
+        {
+            question: "What primary goal does proper filing achieve in a medical facility?",
+            options: [
+                "Keeping records organized, updated, accessible, and secure",
+                "Reducing hospital electrical costs",
+                "Eliminating all paper documents",
+                "Speeding up surgical operations"
+            ],
+            answer: 0
+        },
+        {
+            question: "Which file label is most appropriate for a color-coding system designed to flag urgent attention?",
+            options: [
+                "A distinct color label indicating urgency",
+                "Standard white labels only",
+                "Invisible ink labels",
+                "Unmarked gray tabs"
+            ],
+            answer: 0
+        },
+        {
+            question: "What is a key risk of poor filing practices in a medical office?",
+            options: [
+                "Misplaced records leading to delayed or inaccurate patient care",
+                "Immediate loss of facility accreditation",
+                "Increased cost of paper folders",
+                "Faster patient registration"
+            ],
+            answer: 0
+        },
+
+        // SECTION 5: Medical Document Formatting & Guidelines
+        {
+            question: "What key components should be included in the Header of a medical document?",
+            options: [
+                "Date, subject, and recipient details",
+                "Clinic logo, physician home address, and weather forecast",
+                "Patient billing history and bank account number",
+                "List of all clinic employees"
+            ],
+            answer: 0
+        },
+        {
+            question: "How should the Body of a medical document be written?",
+            options: [
+                "In long, complex prose with ornamental words",
+                "Using clear and concise language, organizing information logically",
+                "Using bullet points only with no complete sentences",
+                "In informal, conversational slang"
+            ],
+            answer: 1
+        },
+        {
+            question: "Which standard font styles are explicitly recommended for medical documents?",
+            options: [
+                "Arial or Times New Roman",
+                "Comic Sans or Impact",
+                "Script or Calligraphy",
+                "Courier New or Gothic"
+            ],
+            answer: 0
+        },
+        {
+            question: "What is the standard line spacing recommended for typing medical documents?",
+            options: [
+                "Single spacing (1.0) only",
                 "1.15 or 1.5 spacing",
-                "Double line spacing (2.0) with triple indents",
+                "Double spacing (2.0) exclusively",
                 "Triple spacing (3.0)"
             ],
             answer: 1
         },
         {
-            question: "Which standard font styles are recommended for typing medical documents?",
+            question: "What is the purpose of Proofreading medical documents before finalization?",
             options: [
-                "Comic Sans or Impact",
-                "Arial or Times New Roman",
-                "Courier New or Papyrus",
-                "Brush Script or Bradley Hand"
+                "To increase document word count",
+                "To review the document for spelling and grammar errors",
+                "To change the recipient's name",
+                "To re-format the entire document layout"
             ],
             answer: 1
         },
         {
-            question: "Why is extreme accuracy essential when preparing medical documents?",
+            question: "Why is Accuracy emphasized as a critical requirement in medical documents?",
             options: [
-                "Errors can directly impact patient care and safety",
-                "It reduces the size of paper files",
-                "It is required to change hospital ownership",
-                "It prevents computer monitors from malfunctioning"
+                "Errors can directly impact patient care",
+                "Inaccurate files take up too much digital space",
+                "It lowers typing speed",
+                "Printers reject documents with typos"
+            ],
+            answer: 0
+        },
+        {
+            question: "What requirement ensures that sensitive typed documents remain private?",
+            options: [
+                "Confidentiality using secure systems for typing and storing documents",
+                "Printing on watermarked paper",
+                "Using encrypted fonts",
+                "Password-protecting public monitors"
+            ],
+            answer: 0
+        },
+        {
+            question: "Why must clear and correct Medical Terminology be used in clinical documentation?",
+            options: [
+                "To avoid ambiguous language that could lead to medical errors",
+                "To impress patients with medical knowledge",
+                "To make reports longer",
+                "To satisfy legal length quotas"
+            ],
+            answer: 0
+        },
+        {
+            question: "What is a consequence of using ambiguous language in a medical document?",
+            options: [
+                "Misinterpretation leading to improper patient treatment",
+                "Lower printing costs",
+                "Faster document processing",
+                "Improved patient understanding"
+            ],
+            answer: 0
+        },
+        {
+            question: "What formatting feature helps maintain readability in long medical reports?",
+            options: [
+                "Logical information organization and proper line spacing",
+                "Using decorative font styles",
+                "Removing all headers and margins",
+                "Writing in all capital letters"
+            ],
+            answer: 0
+        },
+
+        // SECTION 6: Comprehensive Review & Scenario-Based Application
+        {
+            question: "A patient arrives at a clinic for the first time. Which process and record type are initiated first?",
+            options: [
+                "Patient Reception/Registration and Patient Admission Record",
+                "Discharge Planning and Operative Report",
+                "Radiology Imaging and Progress Notes",
+                "Physical Therapy and Surgical Record"
+            ],
+            answer: 0
+        },
+        {
+            question: "A doctor needs to check a patient's historical lab values before altering a dosage. What value of medical records does this reflect?",
+            options: [
+                "Continuity of Care",
+                "Color-coding",
+                "Public relations",
+                "Financial auditing"
+            ],
+            answer: 0
+        },
+        {
+            question: "A medical secretary is typing a consultation letter. Which formatting settings conform to standard guidelines?",
+            options: [
+                "Arial font, 1.15 line spacing, clear header, proofread text",
+                "Comic Sans font, 3.0 spacing, no header",
+                "Times New Roman font, 1.0 spacing, incomplete subject line",
+                "Impact font, double spacing, unchecked grammar"
+            ],
+            answer: 0
+        },
+        {
+            question: "An administrative assistant needs to organize physical charts for patients: 'Alvarez', 'Abad', and 'Aquino'. What is the correct order?",
+            options: [
+                "Abad → Alvarez → Aquino",
+                "Abad → Aquino → Alvarez",
+                "Aquino → Abad → Alvarez",
+                "Alvarez → Abad → Aquino"
+            ],
+            answer: 1
+        },
+        {
+            question: "Which professional is responsible for guiding a patient through rehabilitation exercises following knee surgery?",
+            options: [
+                "Physical Therapist",
+                "Occupational Therapist",
+                "Radiologic Technologist",
+                "Lab Technician"
+            ],
+            answer: 0
+        },
+        {
+            question: "Which role specifically focuses on helping stroke patients relearn how to dress and feed themselves?",
+            options: [
+                "Occupational Therapist",
+                "Physical Therapist",
+                "Nursing Aide",
+                "Paramedic"
+            ],
+            answer: 0
+        },
+        {
+            question: "If a medical record is requested during a legal malpractice trial, it is being utilized as:",
+            options: [
+                "Legal Documentation",
+                "Clinical Training Guide",
+                "Patient Portal Data",
+                "Administrative Billing"
+            ],
+            answer: 0
+        },
+        {
+            question: "Who assists Registered Nurses specifically by administering and fetching necessary medical supplies?",
+            options: [
+                "Nursing Aide",
+                "Physician Assistant",
+                "General Practitioner",
+                "Health Officer"
+            ],
+            answer: 0
+        },
+        {
+            question: "What type of report will a surgeon author immediately after completing an appendectomy?",
+            options: [
+                "Operative Report",
+                "Discharge Summary",
+                "Admission Record",
+                "Public Health Report"
+            ],
+            answer: 0
+        },
+        {
+            question: "Which electronic tool allows patients to directly log in and view their personal immunization history?",
+            options: [
+                "Patient Portal",
+                "EHR Administrative Console",
+                "Hospital Billing Database",
+                "Radiology Information System"
+            ],
+            answer: 0
+        },
+        {
+            question: "What is the primary focus of Public Health Professionals?",
+            options: [
+                "Community health, disease prevention, and health policy",
+                "One-on-one surgical care",
+                "Individual prescription dispensing",
+                "Physical therapy rehabilitation"
+            ],
+            answer: 0
+        },
+        {
+            question: "When filing records numerically, where should chart #00452 be placed?",
+            options: [
+                "After #00451 and before #00453",
+                "Before #00440",
+                "At the very end of the entire alphabetical system",
+                "In the emergency red folder"
+            ],
+            answer: 0
+        },
+        {
+            question: "A document containing daily nurse observations and patient vital signs belongs to which category of hospital records?",
+            options: [
+                "Nursing Records",
+                "Surgical Records",
+                "Admission Records",
+                "Radiology Records"
+            ],
+            answer: 0
+        },
+        {
+            question: "What principle is violated if a medical secretary discusses a patient's diagnostic results in a crowded elevator?",
+            options: [
+                "Confidentiality",
+                "Accuracy",
+                "Accessibility",
+                "Alignment"
+            ],
+            answer: 0
+        },
+        {
+            question: "Why must administrative and clinical tasks in a healthcare office be coordinated smoothly?",
+            options: [
+                "To maintain high-quality patient care and operational efficiency",
+                "To reduce the number of working doctors",
+                "To shorten patient office visits to under 1 minute",
+                "To eliminate administrative staff costs"
+            ],
+            answer: 0
+        },
+        {
+            question: "Which healthcare professional specializes in diagnosing mental illnesses and can prescribe medical prescriptions?",
+            options: [
+                "Psychiatrist",
+                "Psychologist",
+                "Occupational Therapist",
+                "Social Worker"
+            ],
+            answer: 0
+        },
+        {
+            question: "What type of medical report summarizes a patient's entire hospital stay, final diagnosis, and aftercare plan?",
+            options: [
+                "Discharge Summary",
+                "Clinical Report",
+                "Progress Note",
+                "Operative Report"
+            ],
+            answer: 0
+        },
+        {
+            question: "Which font style should be AVOIDED when preparing formal medical documents?",
+            options: [
+                "Comic Sans",
+                "Arial",
+                "Times New Roman",
+                "Standard professional serif/sans-serif fonts"
+            ],
+            answer: 0
+        },
+        {
+            question: "What is the purpose of assigning specific color tabs to patient folders?",
+            options: [
+                "To quickly categorize files by type, category, or urgency",
+                "To indicate which doctor created the file",
+                "To highlight spelling mistakes",
+                "To show which files are ready to be recycled"
+            ],
+            answer: 0
+        },
+        {
+            question: "According to the course concluding guidelines, safe and quality patient care relies on which combination of factors?",
+            options: [
+                "Accuracy, confidentiality, clear terminology, and proper document formatting",
+                "Fast typing speed, low costs, and minimal documentation",
+                "Informal summaries, verbal reports, and open filing cabinets",
+                "Handwritten charts, single spacing, and arbitrary file placement"
             ],
             answer: 0
         }
@@ -566,6 +1277,7 @@
 
         selectedOption = index;
         const q = questions[currentQuestionIndex];
+
         const buttons = optionsContainerEl.querySelectorAll(".option-btn");
 
         buttons.forEach((btn, idx) => {
