@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Medical Office Procedures Quiz</title>
+    <style>
+        :root {
+            --bg-color: #fcf4f6;
+            --card-bg: #ffffff;
+            --primary-pink: #d87093;
+            --soft-pink: #f8dbed;
+            --hover-pink: #f0c2dd;
+            --dark-pink: #8b4513;
+            --text-dark: #4a3b40;
+            --text-muted: #7a6b70;
+            --correct-bg: #d4edda;
+            --correct-border: #c3e6cb;
+            --incorrect-bg: #f8d7da;
+            --incorrect-border: #f5c6cb;
+            --shadow: 0 4px 15px rgba(216, 112, 147, 0.15);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .quiz-container {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            width: 100%;
+            max-width: 800px;
+            padding: 30px;
+            border: 2px solid var(--soft-pink);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--soft-pink);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: var(--primary-pink);
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            background-color: var(--soft-pink);
+            height: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: var(--primary-pink);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .question-number {
+            font-weight: 600;
+            color: var(--primary-pink);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.85rem;
+        }
+
+        .question-text {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .option-btn {
+            background-color: #fff;
+            border: 2px solid var(--soft-pink);
+            border-radius: 10px;
+            padding: 14px 18px;
+            font-size: 1rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.2s ease;
+        }
+
+        .option-btn:hover:not([disabled]) {
+            background-color: var(--hover-pink);
+            border-color: var(--primary-pink);
+        }
+
+        .option-btn.correct {
+            background-color: var(--correct-bg) !important;
+            border-color: var(--correct-border) !important;
+            color: #155724;
+            font-weight: 600;
+        }
+
+        .option-btn.incorrect {
+            background-color: var(--incorrect-bg) !important;
+            border-color: var(--incorrect-border) !important;
+            color: #721c24;
+        }
+
+        .footer {
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-next {
+            background-color: var(--primary-pink);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-next:hover {
+            background-color: #c2597d;
+        }
+
+        .btn-next:disabled {
+            background-color: #e0b0bc;
+            cursor: not-allowed;
+        }
+
+        .score-container {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .score-title {
+            font-size: 2rem;
+            color: var(--primary-pink);
+            margin-bottom: 15px;
+        }
+
+        .score-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .restart-btn {
+            background-color: var(--primary-pink);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .restart-btn:hover {
+            background-color: #c2597d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container" id="quizContainer">
+    <header>
+        <h1>Medical Office Procedures Quiz</h1>
+        <div class="subtitle">Complete Question Bank (Based on Module Presentation Files)</div>
+    </header>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div id="quizBody">
+        <div class="question-number" id="questionNumber">Question 1</div>
+        <div class="question-text" id="questionText">Question content goes here...</div>
+        <div class="options-container" id="optionsContainer"></div>
+
+        <div class="footer">
+            <span id="scoreTracker" style="color: var(--text-muted); font-size: 0.9rem;"></span>
+            <button class="btn-next" id="nextBtn" onclick="nextQuestion()" disabled>Next Question</button>
+        </div>
+    </div>
+
+    <div id="resultBody" class="score-container" style="display: none;">
+        <div class="score-title">Quiz Completed!</div>
+        <div class="score-number" id="finalScore">0 / 0</div>
+        <p id="scoreFeedback" style="color: var(--text-muted); margin-bottom: 30px;"></p>
+        <button class="restart-btn" onclick="restartQuiz()">Try Again</button>
+    </div>
+</div>
+
+<script>
+    const questions = [
+        {
+            question: "Which of the following describes the main purpose of Medical Office Procedures?",
+            options: [
+                "Providing front office (administrative) skills to work in a healthcare facility",
+                "Performing high-risk surgical operations in place of physicians",
+                "Manufacturing pharmaceutical supplies and retail marketing",
+                "Managing public transport networks for patients"
+            ],
+            answer: 0
+        },
+        {
+            question: "Which healthcare professional is primarily responsible for diagnosing and treating illnesses and prescribing medications?",
+            options: [
+                "Pharmacist",
+                "Doctor/Physician",
+                "Radiology Technologist",
+                "Medical Assistant"
+            ],
+            answer: 1
+        },
+        {
+            question: "What type of healthcare provider provides primary care for a wide range of general conditions?",
+            options: [
+                "Specialists",
+                "General Practitioners (GPs)",
+                "Occupational Therapists",
+                "Psychiatrists"
+            ],
+            answer: 1
+        },
+        {
+            question: "Which nurse classification delivers advanced nursing care?",
+            options: [
+                "Registered Nurses (RNs)",
+                "Nursing Assistants",
+                "Nursing Aides",
+                "Public Health Workers"
+            ],
+            answer: 0
+        },
+        {
+            question: "Which role provides basic medical care strictly under the supervision of RNs and doctors?",
+            options: [
+                "Physician Assistant",
+                "Specialist Doctor",
+                "Nursing Assistant",
+                "Lab Technologist"
+            ],
+            answer: 2
+        },
+        {
+            question: "What is the main function of a Nursing Aide?",
+            options: [
+                "Prescribing targeted therapy medications",
+                "Helps the RNs in administering supplies needed",
+                "Operating magnetic resonance imaging (MRI) equipment",
+                "Handling primary legal disputes for hospitals"
+            ],
+            answer: 1
+        },
+        {
+            question: "Which professional performs diagnostic tests such as blood tests, biopsies, and imaging interpretation support?",
+            options: [
+                "Lab Technicians/Technologists",
+                "Occupational Therapists",
+                "Medical Secretaries",
+                "Paramedics"
+            ],
+            answer: 0
+        },
+        {
+            question: "Which specialist operates imaging equipment such as X-rays, MRIs, and CT scans?",
+            options: [
+                "Physical Therapist",
+                "Radiology Technologist",
+                "Clinical Psychologist",
+                "Public Health Officer"
+            ],
+            answer: 1
+        },
+        {
+            question: "What is the primary objective of a Physical Therapist?",
+            options: [
+                "To dispense prescription drugs",
+                "To help patients recover from injuries or surgeries through exercises and rehabilitation",
+                "To perform emergency surgical interventions",
+                "To prepare insurance claims and billing statements"
+            ],
+            answer: 1
+        },
+        {
+            question: "Which therapist assists patients in regaining or improving skills needed for daily living and work after an injury or illness?",
+            options: [
+                "Occupational Therapist",
+                "Radiology Technologist",
+                "Emergency Medical Technician",
+                "General Practitioner"
+            ],
+            answer: 0
+        },
+        {
+            question: "Which emergency response personnel provide immediate care in ambulances or at accident scenes?",
+            options: [
+                "Pharmacists and Lab Technicians",
+                "Paramedics and Emergency Medical Technicians (EMTs)",
+                "Psychiatrists and Psychologists",
+                "Administrative Personnel"
+            ],
+            answer: 1
+        },
+        {
+            question: "What differentiates a Psychiatrist from a Psychologist?",
+            options: [
+                "Psychiatrists are medical doctors who can prescribe medications for mental illnesses.",
+                "Psychologists perform diagnostic X-rays while psychiatrists do not.",
+                "Psychiatrists only conduct physical therapy exercises.",
+                "Psychologists are permitted to perform surgical procedures."
+            ],
+            answer: 0
+        },
+        {
+            question: "What are Medical Records?",
+            options: [
+                "Financial ledger sheets used exclusively by accounting departments",
+                "Documentation of a patient's medical history and care",
+                "Publicly published summaries of hospital equipment expenses",
+                "Internal communications sent between insurance brokers"
+            ],
+            answer: 1
+        },
+        {
+            question: "Which of the following is an example of an Electronic Health Record (EHR)?",
+            options: [
+                "A handwritten paper chart kept in a filing cabinet",
+                "A digital version of a patient's chart accessible across different health providers",
+                "A printout stored in a personal home vault",
+                "A verbal report given over the telephone"
+            ],
+            answer: 1
+        },
+        {
+            question: "What are Patient Portals?",
+            options: [
+                "Online platforms allowing patients to view and manage their own medical records",
+                "Physical doorways designated for emergency personnel only",
+                "Internal server rooms holding paper backup files",
+                "Billing counters located at hospital entrances"
+            ],
+            answer: 0
+        },
+        {
+            question: "How do medical records support Continuity of Care?",
+            options: [
+                "By allowing doctors to check previous treatment before initiating new treatment",
+                "By automatically generating marketing brochures for new medications",
+                "By deleting historical records to keep files lightweight",
+                "By ensuring patients receive discounts on healthcare costs"
+            ],
+            answer: 0
+        },
+        {
+            question: "Under what circumstance are medical records used as Legal Documentation?",
+            options: [
+                "As legal evidence in case of disputes regarding medical care",
+                "To standardise employee salaries across healthcare units",
+                "To serve as public advertisements for hospital quality",
+                "To file commercial tax exemptions"
+            ],
+            answer: 0
+        },
+        {
+            question: "Which major United States legislation is cited for protecting patient record confidentiality?",
+            options: [
+                "OSHA",
+                "HIPAA",
+                "FERPA",
+                "FDA"
+            ],
+            answer: 1
+        },
+        {
+            question: "What is a Medical Report?",
+            options: [
+                "A written document communicating medical history, diagnoses, treatments, and progress",
+                "An invoice detailing hardware purchase costs for a clinic",
+                "A legal contract signed between drug distributors and pharmacies",
+                "A press release distributed to local news stations"
+            ],
+            answer: 0
+        },
+        {
+            question: "Which type of medical report specifically details a surgical procedure and its outcomes?",
+            options: [
+                "Clinical Report",
+                "Operative Report",
+                "Discharge Summary",
+                "Progress Notes"
+            ],
+            answer: 1
+        },
+        {
+            question: "What is contained within a Discharge Summary?",
+            options: [
+                "Daily initial attendance logs of clinic staff",
+                "A summary of the patient's hospital stay and instructions for aftercare",
+                "Equipment maintenance schedules for operating rooms",
+                "Pre-registration insurance pre-authorization codes"
+            ],
+            answer: 1
+        },
+        {
+            question: "What are Progress Notes?",
+            options: [
+                "Regular updates written by healthcare professionals on a patient's condition and treatment",
+                "Annual budget projections for medical office supplies",
+                "Certificates of completion for healthcare training modules",
+                "Receipts issued to patients upon cash payment"
+            ],
+            answer: 0
+        },
+        {
+            question: "Which hospital record documents personal and medical information upon entry to the facility?",
+            options: [
+                "Patient Admission Records",
+                "Radiology and Lab Records",
+                "Surgical Records",
+                "Discharge Summary"
+            ],
+            answer: 0
+        },
+        {
+            question: "What information is typically stored in Nursing Records?",
+            options: [
+                "Surgical room leasing rates",
+                "Nursing observations, treatments, and patient responses",
+                "Radiology equipment calibration history",
+                "Pharmacist license renewal dates"
+            ],
+            answer: 1
+        },
+        {
+            question: "Alphabetical filing organizes patient records according to what key criterion?",
+            options: [
+                "Patient ID number",
+                "Patient last name",
+                "Date of birth",
+                "Severity of medical condition"
+            ],
+            answer: 1
+        },
+        {
+            question: "In Numerical Filing, how are files arranged?",
+            options: [
+                "By patient identification numbers",
+                "By age of the patient",
+                "By zip code of residence",
+                "By alphabetical sequence of first names"
+            ],
+            answer: 0
+        },
+        {
+            question: "What is the primary advantage of using Color-Coding in filing systems?",
+            options: [
+                "It reduces printing ink costs",
+                "It helps easily differentiate types of documents or urgency using visual labels",
+                "It eliminates the need to keep digital backups",
+                "It replaces the requirement for written patient names"
+            ],
+            answer: 1
+        },
+        {
+            question: "According to best practices for document formatting, what line spacing is recommended?",
+            options: [
+                "Single line spacing (1.0) only",
+                "1.15 or 1.5 spacing",
+                "Double line spacing (2.0) with triple indents",
+                "Triple spacing (3.0)"
+            ],
+            answer: 1
+        },
+        {
+            question: "Which standard font styles are recommended for typing medical documents?",
+            options: [
+                "Comic Sans or Impact",
+                "Arial or Times New Roman",
+                "Courier New or Papyrus",
+                "Brush Script or Bradley Hand"
+            ],
+            answer: 1
+        },
+        {
+            question: "Why is extreme accuracy essential when preparing medical documents?",
+            options: [
+                "Errors can directly impact patient care and safety",
+                "It reduces the size of paper files",
+                "It is required to change hospital ownership",
+                "It prevents computer monitors from malfunctioning"
+            ],
+            answer: 0
+        }
+    ];
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+    let selectedOption = null;
+
+    const questionNumberEl = document.getElementById("questionNumber");
+    const questionTextEl = document.getElementById("questionText");
+    const optionsContainerEl = document.getElementById("optionsContainer");
+    const nextBtn = document.getElementById("nextBtn");
+    const progressBar = document.getElementById("progressBar");
+    const scoreTracker = document.getElementById("scoreTracker");
+
+    function loadQuestion() {
+        if (questions.length === 0) return;
+
+        const q = questions[currentQuestionIndex];
+        selectedOption = null;
+        nextBtn.disabled = true;
+
+        questionNumberEl.textContent = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
+        questionTextEl.textContent = q.question;
+        scoreTracker.textContent = `Score: ${score}`;
+
+        const progressPct = ((currentQuestionIndex) / questions.length) * 100;
+        progressBar.style.width = `${progressPct}%`;
+
+        optionsContainerEl.innerHTML = "";
+        q.options.forEach((opt, idx) => {
+            const btn = document.createElement("button");
+            btn.className = "option-btn";
+            btn.textContent = opt;
+            btn.onclick = () => selectOption(idx, btn);
+            optionsContainerEl.appendChild(btn);
+        });
+    }
+
+    function selectOption(index, button) {
+        if (selectedOption !== null) return;
+
+        selectedOption = index;
+        const q = questions[currentQuestionIndex];
+        const buttons = optionsContainerEl.querySelectorAll(".option-btn");
+
+        buttons.forEach((btn, idx) => {
+            btn.disabled = true;
+            if (idx === q.answer) {
+                btn.classList.add("correct");
+            } else if (idx === index) {
+                btn.classList.add("incorrect");
+            }
+        });
+
+        if (index === q.answer) {
+            score++;
+            scoreTracker.textContent = `Score: ${score}`;
+        }
+
+        nextBtn.disabled = false;
+    }
+
+    function nextQuestion() {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+            loadQuestion();
+        } else {
+            showResults();
+        }
+    }
+
+    function showResults() {
+        document.getElementById("quizBody").style.display = "none";
+        document.getElementById("resultBody").style.display = "block";
+        progressBar.style.width = "100%";
+
+        const finalScoreEl = document.getElementById("finalScore");
+        const feedbackEl = document.getElementById("scoreFeedback");
+
+        finalScoreEl.textContent = `${score} / ${questions.length}`;
+
+        const percentage = questions.length > 0 ? (score / questions.length) * 100 : 0;
+        if (percentage >= 85) {
+            feedbackEl.textContent = "Outstanding performance! You have thoroughly mastered all course topics!";
+        } else if (percentage >= 70) {
+            feedbackEl.textContent = "Great job! You have a strong grasp of the material.";
+        } else if (percentage >= 50) {
+            feedbackEl.textContent = "Fair effort! Review the lesson presentations to strengthen your weak areas.";
+        } else {
+            feedbackEl.textContent = "Keep practicing! Carefully review the presentation files and try again.";
+        }
+    }
+
+    function restartQuiz() {
+        currentQuestionIndex = 0;
+        score = 0;
+        document.getElementById("quizBody").style.display = "block";
+        document.getElementById("resultBody").style.display = "none";
+        loadQuestion();
+    }
+
+    loadQuestion();
+</script>
+
+</body>
+</html>
